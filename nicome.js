@@ -16,15 +16,17 @@
 
     // spanを生成して流して消すという一連の流れを関数にしてそれを並列で沢山繰り返したい
 
+    var comme_template = document.createElement("span");
+    comme_template.setAttribute('style', "width: 1000px; color: white; font-size: 64px; position: absolute;");
+
     setInterval(function(){ // このインターバルの中でDOMの生成、流す、消すを行う
         // DOMを生成・BODYに追加
-        var comment = document.createElement("span");
-        // comment.class = "comment"; // styleタグのやつが反映されないので、↓のように書いた
-        comment.style = "width: 1000px; color: white; font-size: 64px; position: absolute;";
+        var comment = comme_template.cloneNode(true);
         var random_id = random_str();
         comment.id = random_id;
-        var objBody = document.getElementsByTagName("body").item(0);
-        objBody.appendChild(comment);
+        // var objdiv = document.getElementsByTagName("body").item(0); // bodyだけではなく任意のものにしたい
+        var objdiv = document.getElementById("nicome"); // bodyだけではなく任意のものにしたい
+        objdiv.appendChild(comment);
 
         // DOMを流す
         var flow_come = document.getElementById(random_id)
