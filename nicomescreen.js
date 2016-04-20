@@ -23,8 +23,7 @@
         var comment = comme_template.cloneNode(true);
         var random_id = random_str();
         comment.id = random_id;
-        // var objdiv = document.getElementsByTagName("body").item(0); // bodyだけではなく任意のものにしたい
-        var objdiv = document.getElementById("nicome"); // bodyだけではなく任意のものにしたい
+        var objdiv = document.getElementById("nicome");
         objdiv.appendChild(comment);
 
         // DOMを流す

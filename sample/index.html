@@ -27,18 +27,20 @@ body {
 
 <script type="text/javascript">
     var comme_contents = [
-        'さすがに草',
-        'わろたw',
-        'どうしてそうなったし',
+        'あっ増えた',
+        'むむむっ！',
+        'すごくいぃんです！',
     ];
 </script>
-<script type="text/javascript" src="fullscreen.js"></script>
-<script type="text/javascript" src="nicome.js"></script>
+<script type="text/javascript" src="../nicomescreen.js"></script>
+
+<!--フルスクリーン機能の部分-->
+<script type="text/javascript" src="../utils.js"></script>
 <script type="text/javascript">
     (function(){
         if (window.addEventListener){
-            document.getElementById("fullscreen_request").addEventListener("click", function (e){
-                ElementRequestFullscreen(document.getElementById("nicome"));
+            document.getElementById("fullscreen_request").addEventListener("click", function (e){ // idがfullscreen_requestのinputのイベント
+                ElementRequestFullscreen(document.getElementById("nicome")); // idがnicomeであるコンテンツをフルスクリーンにする
             });
         }
     })();
