@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Nicocome</title>
+<style type="text/css">
+body {
+    margin:0;
+    padding:0;
+    background-color: #333;
+}
+.comment {
+    width: 100px;
+    color: white;
+    font-size: 64px;
+    position: absolute;
+}
+</style>
+</head>
+
+<body>
+    <input type="button" id="fullscreen_request" value="start fullscreen" style="width:200px;heigh:50px;margin-top:20px;margin-bottom:10px;">
+    <div id="nicome">
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    var comme_contents = [
+        'あっ増えた',
+        'むむむっ！',
+        'すごくいぃんです！',
+    ];
+</script>
+<script type="text/javascript" src="../nicomescreen.js"></script>
+
+<!--フルスクリーン機能の部分-->
+<script type="text/javascript" src="../utils.js"></script>
+<script type="text/javascript">
+    (function(){
+        if (window.addEventListener){
+            document.getElementById("fullscreen_request").addEventListener("click", function (e){ // idがfullscreen_requestのinputのイベント
+                ElementRequestFullscreen(document.getElementById("nicome")); // idがnicomeであるコンテンツをフルスクリーンにする
+            });
+        }
+    })();
+</script>
+</html>
